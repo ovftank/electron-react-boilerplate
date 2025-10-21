@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Coiny&display=swap');
+@import 'tailwindcss';
+
+@theme {
+    --font-coiny: 'Coiny', system-ui;
+}
+@layer base {
+    :root {
+        @apply h-full;
+        text-rendering: optimizeLegibility;
+        scroll-behavior: smooth;
+        zoom: 1;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        :root {
+            color-scheme: light;
+        }
+    }
+
+    @media (prefers-color-scheme: light) {
+        :root {
+            color-scheme: light;
+        }
+    }
+
+    * {
+        @apply font-coiny m-0 box-border appearance-none p-0 will-change-auto focus:outline-none;
+    }
+
+    body {
+        @apply min-h-full select-none;
+    }
+
+    button,
+    label,
+    summary,
+    [role='button'] {
+        @apply flex cursor-pointer items-center justify-center select-none;
+    }
+
+    input[type='checkbox'],
+    input[type='radio'] {
+        @apply appearance-auto;
+    }
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        @apply appearance-none;
+    }
+
+    input[type='number'] {
+        @apply appearance-none;
+        appearance: textfield;
+        -moz-appearance: textfield;
+    }
+
+    img,
+    video,
+    canvas,
+    svg {
+        @apply block h-auto max-w-full;
+    }
+
+    img {
+        @apply pointer-events-none will-change-auto select-none;
+    }
+
+    [data-loading] {
+        @apply will-change-transform;
+    }
+
+    button {
+        @apply flex items-center justify-center gap-2 rounded-lg bg-emerald-500 px-3 py-2 text-sm leading-0 text-white transition-all hover:bg-emerald-600 active:bg-emerald-700 disabled:cursor-not-allowed disabled:bg-gray-400;
+    }
+
+    a {
+        @apply text-inherit no-underline;
+    }
+
+    textarea {
+        @apply resize-none;
+    }
+
+    ::-webkit-scrollbar {
+        @apply w-1;
+    }
+
+    ::-webkit-scrollbar-track {
+        @apply bg-gray-100;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        @apply rounded-full bg-emerald-400;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        @apply bg-emerald-500;
+    }
+
+    ::selection {
+        @apply bg-emerald-400 text-white;
+    }
+
+    .draggable {
+        -webkit-app-region: drag;
+        -webkit-user-select: none;
+        user-select: none;
+    }
+
+    .no-draggable {
+        -webkit-app-region: no-drag;
+    }
+}

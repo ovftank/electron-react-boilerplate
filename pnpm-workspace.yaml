@@ -1,0 +1,15 @@
+packages:
+    - .
+
+nodeLinker: hoisted
+
+onlyBuiltDependencies:
+    - electron
+    - electron-winstaller
+    - esbuild
+    - lzma-native
+    - onnxruntime-node
+    - rebrowser-puppeteer
+    - sharp
+
+savePrefix: ''
